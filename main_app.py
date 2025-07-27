@@ -172,12 +172,13 @@ def main():
         show_sidebar_actions(app)
     
     # Tab konten utama
-    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
         "📊 Dasbor", 
         "💸 Manajemen Biaya", 
         "📈 Analisis", 
         "📋 Detail Data",
-        "🔄 Compare Data"
+        "🔄 Compare Data",
+        "🧠 Analisis Lengkap"
     ])
     
     with tab1:
@@ -194,6 +195,10 @@ def main():
 
     with tab5:
         show_compare_data_tab()
+    
+    with tab6:
+        from full_analysis_tab import show_full_analysis_tab
+        show_full_analysis_tab()
 
 if __name__ == "__main__":
     main() 
